@@ -1,0 +1,321 @@
+* http: //meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126 License: none (public domain) */ html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* my style */
+
+body {
+    background: linear-gradient(#4993fa 10%, #f1fafb 10%) no-repeat;
+    background-attachment: fixed;
+    color: #7a7b7b;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 1px 0px 5px 0px #ccc;
+}
+
+header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 70px;
+}
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 30px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.data-box {
+    display: inline-block;
+    width: calc(100% * 3 / 12);
+    height: 165px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.data-box img {
+    max-width: 100%;
+    height: 135px;
+}
+
+.data-box a {
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.data-box a:hover {
+    opacity: .9;
+}
+
+.data-box span {
+    display: block;
+    padding: 5px;
+}
+
+
+/* 泡泡效果 */
+
+.ripple {
+    display: block;
+    /*必須呈塊狀 否則只會出現小圓*/
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    z-index: 0;
+}
+
+.mask {
+    display: block;
+    position: absolute;
+    background: rgba(73, 147, 250, 0.3);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+.animate {
+    -webkit-animation: ripple 0.45s linear;
+    -moz-animation: ripple 0.45s linear;
+    -ms-animation: ripple 0.45s linear;
+    -o-animation: ripple 0.45s linear;
+    animation: ripple 0.45s linear;
+}
+
+@-webkit-keyframes ripple {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+    }
+}
+
+@-moz-keyframes ripple {
+    100% {
+        opacity: 0;
+        -moz-transform: scale(2.5);
+    }
+}
+
+@-o-keyframes ripple {
+    100% {
+        opacity: 0;
+        -o-transform: scale(2.5);
+    }
+}
+
+@keyframes ripple {
+    100% {
+        opacity: 0;
+        transform: scale(2.5);
+    }
+}
+
+@media only screen and (max-width:1100px) {
+    body {
+        background: linear-gradient(##4993fa 4%, #f1fafb 4%) no-repeat;
+        background-attachment: fixed;
+    }
+    .wrapper {
+        max-width: 720px;
+    }
+    .data-box {
+        width: calc(100% * 5 / 12);
+    }
+}
+
+@media only screen and (max-width:768px) {
+    body {
+        background: linear-gradient(#23a7f1 3%, #f1fafb 3%) no-repeat;
+        background-attachment: fixed;
+    }
+    .wrapper {
+        max-width: 720px;
+    }
+    header {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    body {
+        background: linear-gradient(#23a7f1 2%, #f1fafb 2%) no-repeat;
+        background-attachment: fixed;
+    }
+    .wrapper {
+        max-width: 350px;
+        margin-top: 15px;
+    }
+    .data-box {
+        width: calc(100% * 10/ 12);
+        height: auto;
+    }
+    header {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+}
+
+
+/*chart style*/
+
+.time {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.from {
+    font-size: 12px;
+    font-weight: 700;
+}
