@@ -1,0 +1,70 @@
+/* CSS Reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+a, i, center, ol, ul, li, form, label,
+table, article, aside, footer, header, 
+nav, section, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+body {
+    line-height: 1.5;
+    height: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input, textarea, object, video, iframe {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input, button {
+	line-height: inherit;
+}
+img {
+	display: inline-block;
+  	max-width: 100%;
+  	height: auto!important;  
+}
+/* icon 置中 */
+.icon-m {
+	height: 1ex;
+}
+/* 清理浮動 */
+.clearfix {
+	*zoom: 1;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/* 隱藏文字 */
+.clip {
+	position: absolute;
+	clip: rect(0,0,0,0);
+}
+/* 常用欄位 12等 */
+.xs-6 {
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+@media (min-width: 576px) {
+	.sm-4 {
+	  	flex: 0 0 33.3333%;
+		max-width: 33.3333%;
+	}
+}
+@media (min-width: 992px) {
+	.md-3 {
+	  	flex: 0 0 25%;
+		max-width: 25%;
+	}
+}
